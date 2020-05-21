@@ -3,3 +3,4 @@ A basic ASP.NET Core MVC application that builds stock charts using the YahooFin
 
 ## Overview
 Built this as an introductury application to ASP.NET and C# for my internship at Microsoft.
+![alt text](https://raw.githubusercontent.com/Maanav-G/Stock-Charts/master/preview.PNG)
