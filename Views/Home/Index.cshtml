@@ -4,37 +4,43 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>
+        The following is a basic ASP.NET Core MVC application that builds stock charts by leveraging the
+        <a href="https://finance.yahoo.com/">YahooFinance API</a> and
+        <a href="https://developers.google.com/chart">Google Charts</a>.
+        <br />
+        <a href="https://getbootstrap.com/">Bootstrap</a> was implemented for all styling.
+        <br /> <br />
+        You can view the source code on my <a href="https://github.com/Maanav-G/Stock-Charts">Github</a>
+    </p>
 </div>
 
-
 <div id="div" class="row" style="padding:20px;">
+
     <div class="col-md-3">
-        <div class="row form-group form-inline" style="margin-top:5px">
+        <div class="row form-group form-inline" style="margin-top:20px">
             <label class="col-sm-5 control-label" for="ticker">Ticker:</label>
             <div class="col-sm-7">
                 <input id="ticker" type="text" class="form-control input-sm"
-                       style="height:25px;width:100%" value="SPY" />
+                       style="height:25px;width:100%" value="MSFT" />
             </div>
         </div>
-        <div class="row form-group form-inline" style="margin-top:-5px">
+        <div class="row form-group form-inline">
             <label class="col-sm-5 control-label" for="startDate">Start Date:</label>
             <div class="col-sm-7">
-                <input id="startDate" type="text" class="form-control input-sm"
-                       style="height:25px;width:100%" value="2016-01-01" />
+                <input id="startDate" type="text" class="form-control input-sm" style="height:25px;width:100%" value="2020-01-01" />
             </div>
         </div>
-        <div class="row form-group form-inline" style="margin-top:-5px">
+        <div class="row form-group form-inline">
             <label class="col-sm-5 control-label" for="endDate">End Date:</label>
             <div class="col-sm-7">
-                <input id="endDate" type="text" class="form-control input-sm"
-                       style="height:25px;width:100%" value="2018-01-01" />
+                <input id="endDate" type="text" class="form-control input-sm" style="height:25px;width:100%" value="2020-05-20" />
             </div>
         </div>
-        <div class="row form-group form-inline" style="margin-top:20px">
+        <div class="row form-group form-inline" style="margin-top:60px">
             <div class="col-sm-5"></div>
             <div class="col-sm-7">
-                <button id="btnCreateChart" class="btn btn-primary">Create Chart</button>
+                <button id="btnCreateChart" class="btn btn-outline-dark btn-block">Generate</button>
             </div>
         </div>
     </div>
@@ -45,6 +51,8 @@
             <div id="filter" style="height:15%;margin-top:1%"></div>
         </div>
     </div>
+
+
 </div>
 @section scripts{
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
